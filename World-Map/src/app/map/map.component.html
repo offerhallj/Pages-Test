@@ -1,0 +1,24 @@
+<div class="flex-container">
+
+    <section class="svg-container" id="svg-container"><!-- loaded svg goes here --></section>
+
+    <section class="info-card-container">
+        <div class="info-card">
+            <h2 id="countryName">{{ countryName }}</h2>    
+            <div class="info-card-data" *ngIf="countryIsValid && isInitialized">
+                <p id="countryISO2Code"><em>ISO 2 Code: </em>{{ countryISO2Code }}</p>
+                <p id="countryCapital"><em>Capital City: </em>{{ countryCapital }}</p>
+                <p id="countryRegion"><em>Region: </em>{{ countryRegion }}</p>
+                <p id="countryIncome"><em>Income Level: </em>{{ countryIncome }}</p>
+                <p id="countryLatitude"><em>Latitude: </em>{{ countryLatitude }}</p>
+                <p id="countryLongitude"><em>Longitude: </em>{{ countryLongitude }}</p>
+            </div>
+            <div class="info-card-data" *ngIf="!countryIsValid && isInitialized">
+                <p>No data could be found for this country.</p>
+            </div>
+            <div class="info-card-data" *ngIf="!isInitialized">
+                <p>Data will appear here</p>
+            </div>
+        </div>
+    </section>
+</div>
